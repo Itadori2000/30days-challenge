@@ -49,6 +49,12 @@ body .app .quiz #answer-buttons .btn:hover {
   background-color: #222;
   color: #fff;
 }
+body .app .quiz #answer-buttons .correct {
+  background-color: #9aeabc;
+}
+body .app .quiz #answer-buttons .incorrect {
+  background-color: #ff9393;
+}
 body .app .quiz #next-btn {
   background-color: #001e4d;
   color: #fff;
@@ -60,10 +66,4 @@ body .app .quiz #next-btn {
   border-radius: 4px;
   cursor: pointer;
   display: none;
-}
-body .app .correct {
-  background-color: #9aeabc;
-}
-body .app .incorrect {
-  background-color: #ff9393;
 }/*# sourceMappingURL=style.css.map */
