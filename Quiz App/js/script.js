@@ -1,4 +1,4 @@
-const question = [
+const questions = [
     {
         question: "Which is largest animal in the world?",
         answers: [
@@ -44,7 +44,7 @@ function starQuiz(){
 
 function showQuestion(){
     resultState();
-    let currentQuestion = question[currentQuestionIndex];
+    let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
@@ -72,8 +72,38 @@ function selectAnswer(e){
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
         selectedBtn.classList.add("correct");
+        score++;
     } else {
         selectedBtn.classList.add("incorrect");
     }
+    Array.from(answerButtons.children).forEach((button) => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
 }
+
+function showScore(){
+    resultState();
+    questionElement.innerHTML = `Your scored ${score} out of ${questions.length}`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+}
+function handleNextButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+nextButton.addEventListener("click",()=>{
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    }else{
+        starQuiz();
+    }
+})
 starQuiz();

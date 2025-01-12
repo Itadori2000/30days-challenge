@@ -45,9 +45,12 @@ body .app .quiz #answer-buttons .btn {
   cursor: pointer;
   transition: all 0.3s;
 }
-body .app .quiz #answer-buttons .btn:hover {
+body .app .quiz #answer-buttons .btn:hover:not([disabled]) {
   background-color: #222;
   color: #fff;
+}
+body .app .quiz #answer-buttons .btn:disabled {
+  cursor: no-drop;
 }
 body .app .quiz #answer-buttons .correct {
   background-color: #9aeabc;

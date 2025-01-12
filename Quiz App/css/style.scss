@@ -42,13 +42,20 @@ body{
                     border-radius: 4px;
                     cursor: pointer;
                     transition: all 0.3s;
-                    &:hover{
+                    &:hover:not([disabled]){
                         background-color: #222;
-                        color: #fff;
-    
+                        color: #fff;  
+                    }
+                    &:disabled{
+                      cursor: no-drop;  
                     }
                 }
-                
+                .correct{
+                    background-color: #9aeabc;
+                }
+                .incorrect{
+                    background-color: #ff9393;
+                }
                 
             }
             #next-btn{
@@ -66,12 +73,7 @@ body{
             }
             
         }
-        .correct{
-            background-color: #9aeabc;
-        }
-        .incorrect{
-            background-color: #ff9393;
-        }
+        
     }
     
 }
