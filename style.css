@@ -25,6 +25,13 @@ body {
 .nav-bar ul li a {
   text-decoration: none;
   color: #000;
+  transition: all 0.2s ease-in;
+}
+.nav-bar ul li a:hover {
+  background-color: #000;
+  color: #FFFDF2;
+  padding: 0.5rem;
+  border-radius: 15px;
 }
 
 .main-container {
@@ -53,7 +60,7 @@ body {
   width: 300px;
   height: inherit;
   margin: 1rem;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 15px;
   position: relative;
   transition: all 0.3s;
@@ -62,7 +69,7 @@ body {
 .main-container .card-container .quiz:hover a,
 .main-container .card-container .generator:hover a,
 .main-container .card-container .notes:hover a {
-  background-color: rgba(0, 0, 0, 0.2862745098);
+  background-color: rgba(0, 0, 0, 0.4352941176);
   display: block;
   border-radius: 15px;
 }

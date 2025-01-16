@@ -21,6 +21,14 @@ body{
             a{
                 text-decoration: none;
                 color: #000;
+                transition: all 0.2s ease-in;
+
+                &:hover{
+                    background-color: #000;
+                    color: #FFFDF2;
+                    padding: 0.5rem;
+                    border-radius: 15px;
+                }
             }
         }
     }
@@ -51,12 +59,12 @@ body{
             width: 300px;
             height: inherit;
             margin: 1rem;
-            border: 1px solid black;
+            border: 2px solid black;
             border-radius: 15px;
             position: relative;
             transition: all 0.3s;
             &:hover a{
-                background-color: #00000049;
+                background-color: #0000006f;
                 display: block;
                 border-radius: 15px;
             }
@@ -76,6 +84,7 @@ body{
                 height: inherit;
                 position: absolute;
                 font-size: 30px;
+                
             }
         }
     }
