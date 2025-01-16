@@ -9,6 +9,26 @@
 body {
   background-color: #001e4d;
 }
+body .nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+body .nav-bar h1 {
+  color: #fff;
+}
+body .nav-bar ul {
+  display: flex;
+}
+body .nav-bar ul li {
+  list-style-type: none;
+  margin-left: 2rem;
+}
+body .nav-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 body .app {
   background-color: #fff;
   width: 90%;
