@@ -7,6 +7,7 @@
 
 body {
   background-color: #FFFDF2;
+  overflow: hidden;
 }
 
 .nav-bar {
@@ -14,13 +15,44 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
+  width: 100%;
+}
+.nav-bar .side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.nav-bar .side-bar li {
+  width: 100%;
+  padding: 1rem;
+}
+.nav-bar .side-bar li a {
+  width: 100%;
 }
 .nav-bar ul {
   display: flex;
+  margin-right: 1.5rem;
+}
+.nav-bar ul .menu-icon {
+  display: none;
 }
 .nav-bar ul li {
   list-style-type: none;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
+}
+.nav-bar ul li i {
+  font-size: 30px;
 }
 .nav-bar ul li a {
   text-decoration: none;
@@ -36,7 +68,6 @@ body {
 
 .main-container {
   width: 100%;
-  min-width: 960px;
   height: 100vh;
 }
 .main-container .heading {
@@ -80,6 +111,8 @@ body {
   width: inherit;
   height: inherit;
   border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-container .card-container .todo a,
 .main-container .card-container .quiz a,
@@ -94,4 +127,20 @@ body {
   height: inherit;
   position: absolute;
   font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .nav-bar .hide-on-mobile {
+    display: none;
+  }
+  .nav-bar ul .menu-icon {
+    display: block;
+  }
+  .main-container .card-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vh;
+  }
 }/*# sourceMappingURL=style.css.map */
